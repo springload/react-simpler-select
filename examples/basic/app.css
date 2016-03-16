@@ -8,14 +8,6 @@ body {
   padding: 0 25px;
 }
 
-.i {
-    width: 96px;
-    height: 96px;
-}
-.i--red {
-    fill: #cc0000;
-}
-
 .footer-menu {
     padding: 25px 25px;
 }
