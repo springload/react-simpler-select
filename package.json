@@ -1,0 +1,53 @@
+{
+  "name": "react-simpler-select",
+  "version": "0.1.0",
+  "description": "React component that renders a select. Supports a list of options or optgroups.",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/springload/react-simpler-select.git"
+  },
+  "homepage": "https://github.com/springload/react-simpler-select",
+  "bugs": "https://github.com/springload/react-simpler-select/issues",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "rackt test --single-run --browsers Firefox",
+    "start": "rackt server",
+    "build": "rackt build"
+  },
+  "authors": [
+    "Claire Campbell",
+    "Thibaud Colas"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "chai": "^3.4.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.3",
+    "rackt-cli": "^0.5.4",
+    "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.1",
+    "react-dom": "^0.14.3"
+  },
+  "peerDependencies": {
+    "react": "^0.14.3"
+  },
+  "keywords": [
+    "reactjs",
+    "react",
+    "react-component",
+    "component",
+    "select",
+    "simpler",
+    "simple",
+    "options",
+    "optgroup",
+    "optgroups"
+  ]
+}
