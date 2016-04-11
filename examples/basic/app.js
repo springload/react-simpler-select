@@ -18,7 +18,7 @@ const decision = [
 const App = React.createClass({
   getInitialState() {
     return {
-      value: 'fr',
+      value: '',
     };
   },
 
@@ -34,22 +34,28 @@ const App = React.createClass({
     return (
       <div className="example">
         <h1>React Simpler Select example</h1>
-        <Select
-          name="decision"
-          id="decision-selector"
-          placeholder="Your decision"
-          options={decision}
-          required
-        />
 
-        <Select
-          name="languages"
-          className="languages"
-          placeholder="Pick an item"
-          value={value}
-          options={options}
-          onChange={this.handleChange}
-        />
+        <form action="">
+          <label htmlFor="decision-selector">Decision</label>
+          <Select
+            name="decision"
+            id="decision-selector"
+            options={decision}
+            autoFocus
+          />
+
+          <Select
+            name="languages"
+            className="u-border"
+            placeholder="Choose"
+            value={value}
+            options={options}
+            onChange={this.handleChange}
+            required
+          />
+
+          <input type="submit" value="Submit" />
+        </form>
 
       </div>
     );
