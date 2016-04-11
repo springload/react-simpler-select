@@ -16,7 +16,26 @@ const options = [
   { value: 'fr', label: 'French' },
 ];
 
-const optgroups = [];
+const optgroups = [
+  {
+    title: 'North Island',
+    id: 'ni',
+    options: [
+      { value: 'wgtn', label: 'Wellington' },
+      { value: 'gsb', label: 'Gisbourne' },
+      { value: 'oh', label: 'Ohakune' },
+    ]
+  },
+  {
+    title: 'South Island',
+    id: 'si',
+    options: [
+      { value: 'ch', label: 'Christchurch' },
+      { value: 'qt', label: 'Queenstown' },
+      { value: 'te', label: 'lake Tekapo' },
+    ]
+  },
+];
 
 const App = React.createClass({
   getInitialState() {
@@ -45,6 +64,7 @@ const App = React.createClass({
             id="decision-selector"
             options={simpleOptions}
             autoFocus
+            onChange={console.log.bind(console)}
           />
 
           <Select
@@ -60,8 +80,9 @@ const App = React.createClass({
           <Select
             name="cities"
             placeholder="Choose"
-            groups={optgroups}
+            options={optgroups}
             required
+            onChange={console.log.bind(console)}
           />
 
           <input type="submit" value="Submit" />
