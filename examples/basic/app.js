@@ -3,6 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Select from '../../lib/index';
 
+const simpleOptions = [
+  'yes',
+  'no',
+  'maybe',
+];
+
 const options = [
   { value: 'cs', label: 'Czech' },
   { value: 'en', label: 'English' },
@@ -10,10 +16,7 @@ const options = [
   { value: 'fr', label: 'French' },
 ];
 
-const decision = [
-  { value: 'yes', label: 'Yes' },
-  { value: 'no', label: 'No' },
-];
+const optgroups = [];
 
 const App = React.createClass({
   getInitialState() {
@@ -40,7 +43,7 @@ const App = React.createClass({
           <Select
             name="decision"
             id="decision-selector"
-            options={decision}
+            options={simpleOptions}
             autoFocus
           />
 
@@ -51,6 +54,13 @@ const App = React.createClass({
             value={value}
             options={options}
             onChange={this.handleChange}
+            required
+          />
+
+          <Select
+            name="cities"
+            placeholder="Choose"
+            groups={optgroups}
             required
           />
 
