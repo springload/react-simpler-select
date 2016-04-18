@@ -33,6 +33,11 @@ You need `rackt-cli v0.5.3` to execute some of these commands.
 - `npm publish` publish component to npm (verify version in package.json)
 - `rackt pages` rebuild gh-pages branch
 
+### Guidelines
+
+- Use pull requests to collaborate around new changes
+- Document changes in the project's [CHANGELOG](CHANGELOG.md)
+
 ## LICENSE
 
 The MIT License (MIT)
