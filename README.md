@@ -3,28 +3,67 @@ React Simpler Select [![npm](https://img.shields.io/npm/v/react-simpler-select.s
 
 > React component that renders a select. Supports a list of options or optgroups. [Demo](https://springload.github.io/react-simpler-select/)
 
-## How to use it
+## Features
+
+## Installation
 
 `npm install --save react-simpler-select`
+
+## Usage
 
 ```js
 import Select from 'react-simpler-select';
 
-// Simplest example
-<Select name='icon-name' className='icon-class'/>
+const options = [
+  { value: 'en', label: 'English' },
+  { value: 'es', label: 'Spanish' },
+];
 
-// All props
-<Select name='icon-name' className='icon-class'/>
+// `onChange` gets called with the value that is selected.
+<Select
+  value="en"
+  options={options}
+  onChange={this.handleChange}
+/>
 
-// Optgroups
-<Select name='icon-name' className='icon-class'/>
+// Use the `placeholder` prop if the select doesn't have a value by default:
+<Select
+  options={options}
+  onChange={this.handleChange}
+  placeholder="Please pick a country"
+/>
+
+// Add props as you go, they will be transfered to the `select` element.
+<Select
+  value="en"
+  options={options}
+  onChange={this.handleChange}
+  autoFocus
+  required
+/>
+
+// Supports `optgroup`s with their own array of options
+const optgroups = [
+  {
+    title: 'North Island',
+    id: 'ni',
+    options: [ { value: 'wgtn', label: 'Wellington' }, { value: 'gsb', label: 'Gisbourne' } ]
+  },
+  {
+    title: 'South Island',
+    id: 'si',
+    options: [ { value: 'ch', label: 'Christchurch' }, { value: 'qt', label: 'Queenstown' } ]
+  },
+];
+
+<Select options={optgroups}/>
 ```
 
 ## Contributing
 
 ### Install / useful commands
 
-You need `rackt-cli v0.5.3` to execute some of these commands.
+You need `npm install -g rackt-cli@0.5.3` to execute some of these commands.
 
 - `npm install` install node dependencies
 - `npm start` run server
