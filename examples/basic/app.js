@@ -3,12 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Select from '../../lib/index';
 
-const simpleOptions = [
-  'yes',
-  'no',
-  'maybe',
-];
-
 const options = [
   { value: 'cs', label: 'Czech' },
   { value: 'en', label: 'English' },
@@ -59,13 +53,6 @@ const App = React.createClass({
 
         <form action="">
           <label htmlFor="decision-selector">Decision</label>
-          <Select
-            name="decision"
-            id="decision-selector"
-            options={simpleOptions}
-            autoFocus
-            onChange={console.log.bind(console)}
-          />
 
           <Select
             name="languages"
