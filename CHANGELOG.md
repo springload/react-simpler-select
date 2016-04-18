@@ -1,36 +1,22 @@
 # Change Log
-All notable changes to this project will be documented in this file.
+
+> All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [[v1.0.0]](https://github.com/springload/react-simpler-select/releases/tag/1.0.0) - 2016-04-19
+
+First stable release!
+
+-------------
+
+## [[x.y.z]](https://github.com/springload/react-simpler-select/releases/tag/x.y.z) - YYYY-MM-DD (Template: http://keepachangelog.com/)
+
 ### Added
-- Proper index.html for gh-pages
-- Travis integration
-- Another example with multiple icons
-- CHANGELOG following [SemVer](http://semver.org)
+
+- Something was added to the API / a new feature was introduced.
 
 ### Changed
-- README include available commands
 
-## [0.1.0] - 2015-10-30
-### Added
-- Unit tests
-- One example
-- index.html to list example (gh-pages)
+### Fixed
 
-### Changed
-- React bumped to 0.14
-- rackt-cli bumped to 0.5.3
-- README link to demo page
-
-## [0.0.6] - 2015-09-04
-### Changed
-- package path
-
-## [0.0.5] - 2015-09-04
-### Added
-- Some unit tests
-
-### Changed
-- Indent
-- README Syntax highlighting + npm badge
+### Removed
