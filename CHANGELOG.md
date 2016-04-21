@@ -3,7 +3,13 @@
 > All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [[v1.0.0]](https://github.com/springload/react-simpler-select/releases/tag/1.0.0) - 2016-04-19
+## [[v1.1.0]](https://github.com/springload/react-simpler-select/releases/tag/v1.1.0) - 2016-04-21
+
+### Added
+
+- Support for React 15
+
+## [[v1.0.0]](https://github.com/springload/react-simpler-select/releases/tag/v1.0.0) - 2016-04-19
 
 First stable release!
 
