@@ -2,7 +2,7 @@
   "name": "react-simpler-select",
   "version": "1.0.0",
   "description": "React component that renders a select. Supports a list of options or optgroups.",
-  "main": "./dist/react-simpler-select.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/springload/react-simpler-select.git"

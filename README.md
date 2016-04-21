@@ -39,7 +39,6 @@ const options = [
   options={options}
   onChange={this.handleChange}
   autoFocus
-  required
 />
 
 // Supports `optgroup`s with their own array of options
@@ -69,7 +68,7 @@ You need `npm install -g rackt-cli@0.5.3` to execute some of these commands.
 - `npm start` run server
 - `npm test` run tests
 - `npm build` build component
-- `npm publish` publish component to npm (verify version in package.json)
+- `rackt release` publish component to npm (verify version in package.json)
 - `rackt pages` rebuild gh-pages branch
 
 ### Guidelines
