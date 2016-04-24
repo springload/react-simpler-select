@@ -1,5 +1,6 @@
 **/.*
 **/__tests__
+lib/components/__tests__
 examples
 
 .editorconfig
