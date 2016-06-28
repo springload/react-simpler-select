@@ -11,7 +11,7 @@ React Simpler Select [![npm](https://img.shields.io/npm/v/react-simpler-select.s
 
 ## Usage
 
-```js
+```jsx
 import Select from 'react-simpler-select';
 
 const options = [
@@ -62,14 +62,17 @@ const optgroups = [
 
 ### Install / useful commands
 
-You need `npm install -g rackt-cli@0.5.3` to execute some of these commands.
+You need `npm install -g rackt-cli@0.5.4` to execute some of these commands.
 
 - `npm install` install node dependencies
-- `npm start` run server
-- `npm test` run tests
-- `npm build` build component
+- `npm run start` run server
+- `npm run test` run tests
+- `npm run build` build component
+- `npm run lint` lint the JS code
 - `rackt release` publish component to npm (verify version in package.json)
 - `rackt pages` rebuild gh-pages branch
+
+> Install the git hooks with `./.githooks/deploy` to check your commits for you.
 
 ### Guidelines
 
