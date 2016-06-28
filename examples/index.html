@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <div style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="leaf" viewBox="0 0 64 28"><path d="M54.17 2.91c-6.3 0-8.53-1.81-15.07-1.81-5.77 0-11.21 2.19-12.31 11.64-.81 7.06-4.19 9.54-8.1 9.54-3.01 0-5.01-1-5.96-3.38 3.86-1.19 6.01-4.44 6.01-8.63 0-5.34-3.44-9.15-9.39-9.15C3.43 1.1 0 4.91 0 10.25c0 4.34 2.29 7.68 6.35 8.77 1.38 6.3 6.2 8.68 12.3 8.68 7.11 0 12.73-4.34 13.88-12.78 2.86 3.1 6.72 4.05 10.64 4.05 10.73 0 18.5-8.2 20.84-17.98-3.3 1.3-6.36 1.92-9.84 1.92zM9.35 13.97c-2.19 0-3.39-1.53-3.39-3.62 0-2.15 1.19-3.67 3.39-3.67 2.24 0 3.43 1.52 3.43 3.67 0 2.1-1.19 3.62-3.43 3.62z"></path></symbol>
+      </svg>
+    </div>
     <div class="wrapper">
       <header>
         <h1>react-simpler-select</h1>
         <p>A simple and highly reusable select component built for React</p>
+        <p><a href="https://www.npmjs.com/package/react-simpler-select"><img alt="npm" src="https://img.shields.io/npm/v/react-simpler-select.svg?style=flat-square"></a> <a href="https://travis-ci.org/springload/react-simpler-select"><img alt="Build Status" src="https://travis-ci.org/springload/react-simpler-select.svg?branch=master"></a> <a href="https://david-dm.org/springload/react-simpler-select#info=devDependencies"><img alt="devDependency Status" src="https://david-dm.org/springload/react-simpler-select/dev-status.svg"></a> <a href="https://codeclimate.com/github/springload/react-simpler-select"><img alt="Code Climate" src="https://codeclimate.com/github/springload/react-simpler-select/badges/gpa.svg"></a></p>
 
         <p class="view"><a href="https://github.com/springload/react-simpler-select">View the Project on GitHub <small>springload/react-simpler-select</small></a></p>
 
@@ -27,14 +33,22 @@
         <a id="example-list" class="anchor" href="#example-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example list</h3>
 
 
-        <div data-basic-example></div>
+        <div class="example">
+          <h2>Basic</h2>
+          <div data-basic-example></div>
+        </div>
+        <div class="example">
+          <h2>Optgroups</h2>
+          <div data-optgroups-example></div>
+        </div>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/springload">springload</a></p>
+        <p>This project is maintained by <a href="https://www.springload.co.nz/">Springload</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="../__build__/shared.js"></script>
     <script src="../__build__/basic.js"></script>
+    <script src="../__build__/optgroups.js"></script>
   </body>
 </html>
