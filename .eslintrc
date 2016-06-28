@@ -10,7 +10,9 @@
     "no-new": [1],
     "no-multi-spaces": [0],
     "no-warning-comments": [1, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
-    "jsx-quotes": [2, "prefer-double"]
+    "jsx-quotes": [2, "prefer-double"],
+    "react/prefer-es6-class": [1],
+    "react/jsx-no-bind": [1]
   },
 
   "env": {
