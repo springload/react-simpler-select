@@ -4,8 +4,10 @@ node_js:
 before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-- npm install -g rackt-cli@0.5.3
-script: rackt test --single-run --browsers Firefox
+- npm install -g rackt-cli@0.5.4
+script:
+- npm run lint
+- rackt test --single-run --browsers Firefox
 notifications:
   email: false
   slack:
