@@ -1,4 +1,4 @@
-React Simpler Select [![npm](https://img.shields.io/npm/v/react-simpler-select.svg)](https://www.npmjs.com/package/react-simpler-select) [![Build Status](https://travis-ci.org/springload/react-simpler-select.svg?branch=master)](https://travis-ci.org/springload/react-simpler-select) [![Dependency Status](https://david-dm.org/springload/react-simpler-select.svg)](https://david-dm.org/springload/react-simpler-select) [![devDependency Status](https://david-dm.org/springload/react-simpler-select/dev-status.svg)](https://david-dm.org/springload/react-simpler-select#info=devDependencies) [![Code Climate](https://codeclimate.com/github/springload/react-simpler-select/badges/gpa.svg)](https://codeclimate.com/github/springload/react-simpler-select)
+[react-simpler-select](https://springload.github.io/react-simpler-select/) [![npm](https://img.shields.io/npm/v/react-simpler-select.svg)](https://www.npmjs.com/package/react-simpler-select) [![Build Status](https://travis-ci.org/springload/react-simpler-select.svg?branch=master)](https://travis-ci.org/springload/react-simpler-select) [![Dependency Status](https://david-dm.org/springload/react-simpler-select.svg)](https://david-dm.org/springload/react-simpler-select) [![devDependency Status](https://david-dm.org/springload/react-simpler-select/dev-status.svg)](https://david-dm.org/springload/react-simpler-select#info=devDependencies) [![Code Climate](https://codeclimate.com/github/springload/react-simpler-select/badges/gpa.svg)](https://codeclimate.com/github/springload/react-simpler-select)
 ===================
 
 > React component that renders a select. Supports a list of options or optgroups. [Demo](https://springload.github.io/react-simpler-select/)
@@ -19,18 +19,11 @@ const options = [
   { value: 'es', label: 'Spanish' },
 ];
 
-// `onChange` gets called with the value that is selected.
 <Select
+  placeholder="Choose a language"
   value="en"
   options={options}
-  onChange={this.handleChange}
-/>
-
-// Use the `placeholder` prop if the select doesn't have a value by default:
-<Select
-  options={options}
-  onChange={this.handleChange}
-  placeholder="Please pick a country"
+  onChange={onChange}
 />
 
 // Add props as you go, they will be transfered to the `select` element.

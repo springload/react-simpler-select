@@ -13,7 +13,7 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "rackt test --single-run --browsers Firefox",
+    "test": "export RACKT_PATH=./node_modules/rackt-cli; ./node_modules/rackt-cli/node_modules/.bin/karma start ./node_modules/rackt-cli/karma.conf.js --single-run --browsers Firefox",
     "start": "rackt server",
     "build": "rackt build",
     "linter:js": "eslint",

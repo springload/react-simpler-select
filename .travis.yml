@@ -7,7 +7,7 @@ before_script:
 - npm install -g rackt-cli@0.5.4
 script:
 - npm run lint
-- rackt test --single-run --browsers Firefox
+- npm run test
 notifications:
   email: false
   slack:
