@@ -8,11 +8,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
+  margin:0 0 15px;
+}
+
+p, ul, ol, table, dl {
   margin:0 0 20px;
 }
 
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+pre {
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -20,7 +24,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:22px;
 }
 
 h2 {
@@ -170,7 +174,7 @@ header ul a strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  padding-bottom:25px;
 }
 
 small {
@@ -390,9 +394,56 @@ footer {
  */
 
 .example {
-  padding: 12.5px 25px;
+  padding: 12.5px 0;
 }
 
 .u-border {
   border: 3px solid blue;
+}
+
+.select-wrapper {
+  position: relative;
+  max-width: 200px;
+}
+
+.select-wrapper:after {
+  position: absolute;
+  top:44%; right:1rem;
+
+  content: '';
+  display: block;
+  border-left: .3125rem solid transparent;
+  border-right: .3125rem solid transparent;
+  border-top: .3125rem solid #333;
+}
+
+.select-wrapper select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .325rem .75rem;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 2px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select-wrapper select::-ms-expand {
+    display: none;
+}
+
+.select-wrapper select::-ms-clear {
+  display: none;
+}
+
+.anchor {
+  display: none;
+}
+
+h4:hover .anchor {
+  display: inline;
 }

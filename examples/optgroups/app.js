@@ -36,12 +36,12 @@ const optgroups = [
   },
 ];
 
+// eslint-disable-next-line no-console
 const onChange = console.log.bind(console);
 
 const select = (
   <Select
-    name="cities"
-    placeholder="Choose your region"
+    name="regions"
     options={optgroups}
     required
     onChange={onChange}
