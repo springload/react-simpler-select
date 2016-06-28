@@ -49,8 +49,6 @@ const App = React.createClass({
 
     return (
       <div className="example">
-        <h1>React Simpler Select example</h1>
-
         <form action="">
           <label htmlFor="decision-selector">Decision</label>
 
@@ -80,4 +78,4 @@ const App = React.createClass({
   },
 });
 
-ReactDOM.render(<App />, document.getElementById('container'));
+ReactDOM.render(<App />, document.querySelector('[data-basic-example]'));
