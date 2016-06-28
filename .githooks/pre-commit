@@ -18,7 +18,7 @@ else
     set -e
 
     NEW_FILES=$(git --no-pager diff --name-only --cached)
-    JS_FILES=$(echo "$NEW_FILES" | { grep -e lib -e examples *.js || true; })
+    JS_FILES=$(echo "$NEW_FILES" | { grep -e lib/*.js -e examples/*.js || true; })
 
     if [ -n "$JS_FILES" ];
     then
