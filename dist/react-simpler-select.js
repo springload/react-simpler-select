@@ -73,7 +73,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint-disable comma-dangle */
 	'use strict';
 	
 	Object.defineProperty(exports, '__esModule', {
@@ -88,20 +87,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var filterProps = function filterProps(props) {
+	  return Object.keys(props).filter(function (k) {
+	    return ['onChange', 'options', 'placeholder'].indexOf(k) === -1;
+	  }).reduce(function (filtered, k) {
+	    // eslint-disable-next-line no-param-reassign
+	    filtered[k] = props[k];
+	    return filtered;
+	  }, {});
+	};
+	
 	exports['default'] = _react2['default'].createClass({
 	  displayName: 'ReactSimplerSelect',
 	
 	  propTypes: {
 	    onChange: _react2['default'].PropTypes.func.isRequired,
-	    placeholder: _react2['default'].PropTypes.string,
-	    options: _react2['default'].PropTypes.array
-	  },
-	
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      placeholder: null,
-	      options: []
-	    };
+	    options: _react2['default'].PropTypes.array.isRequired,
+	    placeholder: _react2['default'].PropTypes.string
 	  },
 	
 	  handleChange: function handleChange(e) {
@@ -144,7 +146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	
 	    if (placeholder) {
-	      children.unshift(this.renderOption({ key: 'placeholder', value: '', disabled: true, label: placeholder }));
+	      children.unshift(this.renderOption({ label: placeholder, value: '', disabled: true }));
 	    }
 	
 	    return children;
@@ -153,7 +155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      'select',
-	      _extends({}, this.props, {
+	      _extends({}, filterProps(this.props), {
 	        onChange: this.handleChange
 	      }),
 	      this.renderChildren()
