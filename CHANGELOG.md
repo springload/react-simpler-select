@@ -3,6 +3,16 @@
 > All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [[v2.0.1]](https://github.com/springload/react-simpler-select/releases/tag/v2.0.1) - 2016-08-10
+
+### Added
+
+- Supports multi select (HTML `multiple` attribute).
+
+### Changed
+
+- displayName is now `Select`.
+
 ## [[v2.0.0]](https://github.com/springload/react-simpler-select/releases/tag/v2.0.0) - 2016-07-05
 
 ### Added
