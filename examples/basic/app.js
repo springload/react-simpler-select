@@ -54,7 +54,6 @@ const App = React.createClass({
 
           <Select
             name="languages"
-            className="u-border"
             placeholder="Choose"
             value={value}
             options={options}
