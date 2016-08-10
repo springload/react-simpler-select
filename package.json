@@ -1,7 +1,7 @@
 {
   "name": "react-simpler-select",
   "version": "2.0.0",
-  "description": "React component that renders a select. Supports a list of options or optgroups.",
+  "description": "React component that renders a select. Supports optgroups, multiple selections.",
   "main": "./lib/index.js",
   "repository": {
     "type": "git",
@@ -9,9 +9,6 @@
   },
   "homepage": "https://github.com/springload/react-simpler-select",
   "bugs": "https://github.com/springload/react-simpler-select/issues",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
     "test": "export RACKT_PATH=./node_modules/rackt-cli; ./node_modules/rackt-cli/node_modules/.bin/karma start ./node_modules/rackt-cli/karma.conf.js --single-run --browsers Firefox",
     "start": "rackt server",
@@ -51,6 +48,8 @@
     "simple",
     "options",
     "optgroup",
-    "optgroups"
+    "optgroups",
+    "multiple",
+    "multiselect"
   ]
 }
