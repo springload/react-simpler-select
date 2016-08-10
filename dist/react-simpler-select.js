@@ -55,15 +55,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
+
 	var _componentsSelect = __webpack_require__(1);
-	
+
 	var _componentsSelect2 = _interopRequireDefault(_componentsSelect);
 
 	exports['default'] = _componentsSelect2['default'];
@@ -74,19 +74,25 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
+
 	var _react = __webpack_require__(2);
-	
+
 	var _react2 = _interopRequireDefault(_react);
-	
+
+	// Converts a DOM NodeList or other iterable to a JS array.
+	var toArray = function toArray(iterable) {
+	  return Array.prototype.slice.call(iterable);
+	};
+
+	// Filters props to remove before transmission to the select element.
 	var filterProps = function filterProps(props) {
 	  return Object.keys(props).filter(function (k) {
 	    return ['onChange', 'options', 'placeholder'].indexOf(k) === -1;
@@ -96,20 +102,42 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return filtered;
 	  }, {});
 	};
-	
+
+	/**
+	 * The Select component. Renders to a plain HTML <select>.
+	 */
 	exports['default'] = _react2['default'].createClass({
-	  displayName: 'ReactSimplerSelect',
-	
+	  displayName: 'Select',
+
 	  propTypes: {
 	    onChange: _react2['default'].PropTypes.func.isRequired,
 	    options: _react2['default'].PropTypes.array.isRequired,
-	    placeholder: _react2['default'].PropTypes.string
+	    placeholder: _react2['default'].PropTypes.string,
+	    value: _react2['default'].PropTypes.any
 	  },
-	
+
 	  handleChange: function handleChange(e) {
-	    this.props.onChange(e.target.value);
+	    var value = undefined;
+
+	    if (this.isMultiSelect()) {
+	      value = toArray(e.target.options).filter(function (option) {
+	        return option.selected;
+	      }).map(function (option) {
+	        return option.value;
+	      });
+	    } else {
+	      value = e.target.value;
+	    }
+
+	    this.props.onChange(value);
 	  },
-	
+
+	  isMultiSelect: function isMultiSelect() {
+	    var value = this.props.value;
+
+	    return Array.isArray(value);
+	  },
+
 	  renderOption: function renderOption(option) {
 	    return _react2['default'].createElement(
 	      'option',
@@ -121,17 +149,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	      option.label
 	    );
 	  },
-	
+
 	  renderChildren: function renderChildren() {
 	    var _this = this;
-	
+
 	    var _props = this.props;
 	    var options = _props.options;
 	    var placeholder = _props.placeholder;
-	
+
 	    var children = options.map(function (item) {
 	      var child = undefined;
-	
+
 	      if (item.options) {
 	        child = _react2['default'].createElement(
 	          'optgroup',
@@ -141,22 +169,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	      } else {
 	        child = _this.renderOption(item);
 	      }
-	
+
 	      return child;
 	    });
-	
+
 	    if (placeholder) {
 	      children.unshift(this.renderOption({ label: placeholder, value: '', disabled: true }));
 	    }
-	
+
 	    return children;
 	  },
-	
+
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      'select',
 	      _extends({}, filterProps(this.props), {
-	        onChange: this.handleChange
+	        onChange: this.handleChange,
+	        multiple: this.isMultiSelect()
 	      }),
 	      this.renderChildren()
 	    );

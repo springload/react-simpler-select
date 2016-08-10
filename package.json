@@ -1,6 +1,6 @@
 {
   "name": "react-simpler-select",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React component that renders a select. Supports optgroups, multiple selections.",
   "main": "./lib/index.js",
   "repository": {
