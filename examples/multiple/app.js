@@ -13,28 +13,26 @@ const options = [
 const App = React.createClass({
   getInitialState() {
     return {
-      value: '',
+      values: [''],
     };
   },
 
-  handleChange(newValue) {
+  handleChange(newValues) {
     this.setState({
-      value: newValue,
+      values: newValues,
     });
   },
 
   render() {
     return (
       <Select
-        name="languages"
-        placeholder="Choose"
-        value={this.state.value}
+        name="multiple-languages"
+        value={this.state.values}
         options={options}
         onChange={this.handleChange}
-        required
       />
     );
   },
 });
 
-ReactDOM.render(<App />, document.querySelector('[data-basic-example]'));
+ReactDOM.render(<App />, document.querySelector('[data-multiple-example]'));

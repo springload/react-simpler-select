@@ -5,6 +5,12 @@
 
 ## Features
 
+- Renders a plain, accessible HTML `<select>`.
+- Generates `<option>` elements itself from the expected data structure.
+- Has a `placeholder` prop to create a placeholder option at the top of the select.
+- Generates `<optgroup>` elements if the `options` follow the expected data structure.
+- `onChange` returns supports single and `multiple` values in a convenient format.
+
 ## Installation
 
 `npm install --save react-simpler-select`
@@ -34,7 +40,7 @@ const options = [
   autoFocus
 />
 
-// Supports `optgroup`s with their own array of options
+// Supports `optgroup`s with their own array of options.
 const optgroups = [
   {
     title: 'North Island',
@@ -49,6 +55,9 @@ const optgroups = [
 ];
 
 <Select options={optgroups}/>
+
+// Supports `multiple` select. Just make the `value` prop an array, and get selected options as an array in the `onChange` callback.
+<Select value={[ 'ch', 'qt']}/>
 ```
 
 ## Contributing
