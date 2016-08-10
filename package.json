@@ -33,7 +33,7 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
     "mocha": "^3.0.2",
-    "rackt-cli": "^0.5.4",
+    "rackt-cli": "0.5.4",
     "react": "^15.2.0",
     "react-addons-test-utils": "^15.2.0",
     "react-dom": "^15.2.0"
