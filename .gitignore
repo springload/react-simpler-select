@@ -1,6 +1,0 @@
-examples/**/*-bundle.js
-node_modules/
-build
-.idea/
-npm-debug.log
-dist/*.map
