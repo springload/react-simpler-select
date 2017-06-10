@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^6.0.0",
     "mocha": "^3.0.2",
     "rackt-cli": "0.5.4",
-    "react": "^15.3.0",
+    "react": "^15.4.2",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0"
   },
