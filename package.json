@@ -2,26 +2,25 @@
   "name": "react-simpler-select",
   "version": "2.0.1",
   "description": "React component that renders a select. Supports optgroups, multiple selections.",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
+  "author": "Springload",
+  "license": "MIT",
+  "homepage": "https://springload.github.io/react-simpler-select",
+  "bugs": "https://github.com/springload/react-simpler-select/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/springload/react-simpler-select.git"
   },
-  "homepage": "https://github.com/springload/react-simpler-select",
-  "bugs": "https://github.com/springload/react-simpler-select/issues",
-  "scripts": {
-    "test": "export RACKT_PATH=./node_modules/rackt-cli; ./node_modules/rackt-cli/node_modules/.bin/karma start ./node_modules/rackt-cli/karma.conf.js --single-run --browsers Firefox",
-    "start": "rackt server",
-    "build": "rackt build",
-    "linter:js": "eslint",
-    "lint:js": "npm run linter:js -s -- .",
-    "lint": "npm run lint:js -s"
-  },
-  "authors": [
-    "Claire Campbell",
-    "Thibaud Colas"
+  "keywords": [
+    "react",
+    "react-component",
+    "select",
+    "options",
+    "optgroup",
+    "optgroups",
+    "multiselect"
   ],
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.2.2",
@@ -40,18 +39,12 @@
     "prop-types": "^15.5.10",
     "react": "^0.14.3 || ^15.0.0-0"
   },
-  "keywords": [
-    "reactjs",
-    "react",
-    "react-component",
-    "component",
-    "select",
-    "simpler",
-    "simple",
-    "options",
-    "optgroup",
-    "optgroups",
-    "multiple",
-    "multiselect"
-  ]
+  "scripts": {
+    "test": "export RACKT_PATH=./node_modules/rackt-cli; ./node_modules/rackt-cli/node_modules/.bin/karma start ./node_modules/rackt-cli/karma.conf.js --single-run --browsers Firefox",
+    "start": "rackt server",
+    "build": "rackt build",
+    "linter:js": "eslint",
+    "lint:js": "npm run linter:js -s -- .",
+    "lint": "npm run lint:js -s"
+  }
 }
