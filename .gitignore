@@ -72,6 +72,7 @@ local.py
 # Generated files
 # -------------------------------------------------
 dist
+es
 build
 /var/static/
 /var/media/

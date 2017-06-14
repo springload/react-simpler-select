@@ -17,3 +17,4 @@ bin
 .env
 pages
 webpack-stats.json
+*.test.js
