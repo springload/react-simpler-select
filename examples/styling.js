@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Select from '../../lib/index';
+import Select from '../lib/index';
 
 const options = [
   { label: 'C', value: 'c' },
@@ -34,6 +34,6 @@ const select = (
   </div>
 );
 
-const mount = document.querySelector('[data-styling-example]');
+const mount = document.querySelector('[data-mount-styling]');
 
 ReactDOM.render(select, mount);
