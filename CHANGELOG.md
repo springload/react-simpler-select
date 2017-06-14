@@ -9,10 +9,12 @@
 ### Added
 
 - Add `prop-types` as peerDependency ([#26](https://github.com/springload/react-simpler-select/pull/26)).
+- Add ES module target under `pkg.module` field to enable tree shaking.
 
 ### Changed
 
 - Convert all code to be compatible with React 15.5 and React 16 ([#26](https://github.com/springload/react-simpler-select/pull/26)).
+- Convert to stateless functional component for file size.
 
 ### Removed
 

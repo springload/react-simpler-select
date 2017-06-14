@@ -1,6 +1,6 @@
 {
   "name": "react-simpler-select",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "React component that renders a select. Supports optgroups, multiple selections.",
   "main": "dist/index.js",
   "module": "es/index.js",
@@ -42,6 +42,7 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/dist/",
+      "/es/",
       "/pages/",
       "/examples/test.js"
     ],
