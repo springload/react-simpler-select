@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select #options 1`] = `
+<select
+  multiple={false}
+  onChange={[Function]}
+  value="en"
+>
+  <option
+    value="es"
+  >
+    Spanish
+  </option>
+  <option
+    value="cs"
+  >
+    Czech
+  </option>
+  <option
+    value="en"
+  >
+    English
+  </option>
+  <option
+    value="fi"
+  >
+    Finnish
+  </option>
+  <option
+    value="fr"
+  >
+    French
+  </option>
+</select>
+`;
+
+exports[`Select renders 1`] = `
+<select
+  className="field-select"
+  id="decision-selector"
+  multiple={false}
+  name="decision"
+  onChange={[Function]}
+  required={true}
+>
+  <option
+    disabled={true}
+    value=""
+  >
+    Your decision
+  </option>
+</select>
+`;

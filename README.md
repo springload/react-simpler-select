@@ -1,7 +1,8 @@
-[react-simpler-select](https://springload.github.io/react-simpler-select/) [![npm](https://img.shields.io/npm/v/react-simpler-select.svg)](https://www.npmjs.com/package/react-simpler-select) [![Build Status](https://travis-ci.org/springload/react-simpler-select.svg?branch=master)](https://travis-ci.org/springload/react-simpler-select)
-===================
+# [react-simpler-select](https://springload.github.io/react-simpler-select/) [![npm](https://img.shields.io/npm/v/react-simpler-select.svg)](https://www.npmjs.com/package/react-simpler-select) [![Build Status](https://travis-ci.org/springload/react-simpler-select.svg?branch=master)](https://travis-ci.org/springload/react-simpler-select) [![Coverage Status](https://coveralls.io/repos/github/springload/react-simpler-select/badge.svg)](https://coveralls.io/github/springload/react-simpler-select)
 
-> React component that renders a select. Supports optgroups, multiple selections. [Demo](https://springload.github.io/react-simpler-select/)
+> React component that renders a select. Supports optgroups, multiple selections.
+
+Check out the [online demo](https://springload.github.io/react-simpler-select/)!
 
 ## Features
 
@@ -13,7 +14,9 @@
 
 ## Installation
 
-`npm install --save react-simpler-select`
+```sh
+npm install --save react-simpler-select
+```
 
 ## Usage
 
@@ -60,49 +63,51 @@ const optgroups = [
 <Select value={[ 'ch', 'qt']}/>
 ```
 
-## Contributing
+## Development
 
-### Install / useful commands
+### Install
 
-You need `npm install -g rackt-cli@0.5.4` to execute some of these commands.
+> Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
 
-- `npm install` install node dependencies
-- `npm run start` run server
-- `npm run test` run tests
-- `npm run build` build component
-- `npm run lint` lint the JS code
-- `rackt release` publish component to npm (verify version in package.json)
-- `rackt pages` rebuild gh-pages branch
+```sh
+nvm install
+# Then, install all project dependencies.
+npm install
+# Install the git hooks.
+./.githooks/deploy
+```
 
-> Install the git hooks with `./.githooks/deploy` to check your commits for you.
+### Working on the project
 
-### Guidelines
+> Everything mentioned in the installation process should already be done.
 
-- Use pull requests to collaborate around new changes
-- Document changes in the project's [CHANGELOG](CHANGELOG.md)
+```sh
+# Make sure you use the right node version.
+nvm use
+# Start the server and the development tools.
+npm run start
+# Runs linting.
+npm run lint
+# Runs tests.
+npm run test
+# View other available commands with:
+npm run
+```
 
-## LICENSE
+### Releases
 
-The MIT License (MIT)
+- Make a new branch for the release of the new version.
+- Update the [CHANGELOG](CHANGELOG.md).
+- Update the version number in `package.json`, following semver.
+- Make a PR and squash merge it.
+- Back on master with the PR merged, follow the instructions below.
 
-Copyright (c) 2016 Springload
+```sh
+npm run dist
+# Use irish-pub to check the package content. Install w/ npm install -g first.
+irish-pub
+npm publish
+```
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
+- Finally, go to GitHub and create a release and a tag for the new version.
+- Done!
