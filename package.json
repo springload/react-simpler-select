@@ -30,12 +30,14 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
     "mocha": "^3.0.2",
+    "prop-types": "^15.5.10",
     "rackt-cli": "0.5.4",
-    "react": "^15.3.0",
-    "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "peerDependencies": {
+    "prop-types": "^15.5.10",
     "react": "^0.14.3 || ^15.0.0-0"
   },
   "keywords": [
