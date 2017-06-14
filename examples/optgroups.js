@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Select from '../../lib/index';
+import Select from '../lib/index';
 
 const optgroups = [
   {
@@ -48,6 +48,6 @@ const select = (
   />
 );
 
-const mount = document.querySelector('[data-optgroups-example]');
+const mount = document.querySelector('[data-mount-optgroups]');
 
 ReactDOM.render(select, mount);

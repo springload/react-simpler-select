@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select #options 1`] = `
+<select
+  multiple={false}
+  onChange={[Function]}
+  value="en"
+>
+  <option
+    value="es"
+  >
+    Spanish
+  </option>
+  <option
+    value="cs"
+  >
+    Czech
+  </option>
+  <option
+    value="en"
+  >
+    English
+  </option>
+  <option
+    value="fi"
+  >
+    Finnish
+  </option>
+  <option
+    value="fr"
+  >
+    French
+  </option>
+</select>
+`;
+
+exports[`Select #options multiple 1`] = `
+<select
+  multiple={true}
+  onChange={[Function]}
+  value={
+    Array [
+      "es",
+      "fi",
+    ]
+  }
+>
+  <option
+    value="es"
+  >
+    Spanish
+  </option>
+  <option
+    value="cs"
+  >
+    Czech
+  </option>
+  <option
+    value="en"
+  >
+    English
+  </option>
+  <option
+    value="fi"
+  >
+    Finnish
+  </option>
+  <option
+    value="fr"
+  >
+    French
+  </option>
+</select>
+`;
+
+exports[`Select #options optgroups 1`] = `
+<select
+  multiple={false}
+  onChange={[Function]}
+  value="wgtn"
+>
+  <optgroup
+    label="North Island"
+  >
+    <option
+      value="wgtn"
+    >
+      Wellington
+    </option>
+    <option
+      value="gsb"
+    >
+      Gisbourne
+    </option>
+    <option
+      value="oh"
+    >
+      Ohakune
+    </option>
+  </optgroup>
+  <optgroup
+    label="South Island"
+  >
+    <option
+      value="ch"
+    >
+      Christchurch
+    </option>
+    <option
+      value="qt"
+    >
+      Queenstown
+    </option>
+    <option
+      value="te"
+    >
+      lake Tekapo
+    </option>
+  </optgroup>
+</select>
+`;
+
+exports[`Select renders 1`] = `
+<select
+  className="field-select"
+  id="decision-selector"
+  multiple={false}
+  name="decision"
+  onChange={[Function]}
+  required={true}
+  value={null}
+>
+  <option
+    disabled={true}
+    value=""
+  >
+    Your decision
+  </option>
+</select>
+`;

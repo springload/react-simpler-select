@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Select from '../../lib/index';
+import Select from '../lib/index';
 
 const options = [
   { value: 'es', label: 'Spanish' },
@@ -10,29 +10,35 @@ const options = [
   { value: 'fr', label: 'French' },
 ];
 
-const App = React.createClass({
-  getInitialState() {
-    return {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       values: [''],
     };
-  },
+
+    this.handleChange = this.handleChange.bind(this);
+  }
 
   handleChange(newValues) {
     this.setState({
       values: newValues,
     });
-  },
+  }
 
   render() {
+    const { values } = this.state;
+
     return (
       <Select
         name="multiple-languages"
-        value={this.state.values}
+        value={values}
         options={options}
         onChange={this.handleChange}
       />
     );
-  },
-});
+  }
+}
 
-ReactDOM.render(<App />, document.querySelector('[data-multiple-example]'));
+ReactDOM.render(<App />, document.querySelector('[data-mount-multiple]'));
